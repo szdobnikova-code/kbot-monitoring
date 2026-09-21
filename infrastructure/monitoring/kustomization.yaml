@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
   - prometheus-repository.yaml
   - prometheus.yaml
+  - grafana-repository.yaml
+  - loki.yaml
