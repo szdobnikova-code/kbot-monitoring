@@ -21,7 +21,7 @@ spec:
         [OUTPUT]
             Name loki
             Match kube.*
-            Host loki.monitoring.svc.cluster.local
+            Host monitoring-loki.monitoring.svc.cluster.local
             Port 3100
             Labels job=fluent-bit,source=kubernetes
             Auto_Kubernetes_Labels On
@@ -30,7 +30,7 @@ spec:
         [OUTPUT]
             Name loki
             Match host.*
-            Host loki.monitoring.svc.cluster.local
+            Host monitoring-loki.monitoring.svc.cluster.local
             Port 3100
             Labels job=fluent-bit,source=node
             Retry_Limit False
