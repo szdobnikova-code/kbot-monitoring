@@ -21,11 +21,29 @@ spec:
         apiVersion: 1
         datasources:
           - name: Prometheus
+            uid: Prometheus
             type: prometheus
             access: proxy
             url: http://monitoring-prometheus-kube-prometheus.monitoring.svc.cluster.local:9090
             isDefault: true
           - name: Loki
+            uid: Loki
             type: loki
             access: proxy
             url: http://monitoring-loki.monitoring.svc.cluster.local:3100
+
+    dashboardProviders:
+      dashboardproviders.yaml:
+        apiVersion: 1
+        providers:
+          - name: default
+            orgId: 1
+            folder: Monitoring
+            type: file
+            disableDeletion: false
+            editable: true
+            options:
+              path: /var/lib/grafana/dashboards/default
+
+    dashboardsConfigMaps:
+      default: kbot-monitoring-dashboard

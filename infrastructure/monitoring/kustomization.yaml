@@ -9,3 +9,4 @@ resources:
   - fluent-bit.yaml
   - grafana.yaml
   - kbot-metrics-service.yaml
+  - grafana-dashboard-configmap.yaml
