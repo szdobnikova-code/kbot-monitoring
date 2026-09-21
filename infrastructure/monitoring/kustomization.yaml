@@ -7,5 +7,5 @@ resources:
   - loki.yaml
   - fluent-repository.yaml
   - fluent-bit.yaml
-
   - grafana.yaml
+  - kbot-metrics-service.yaml

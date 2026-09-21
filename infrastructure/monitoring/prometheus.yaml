@@ -22,6 +22,12 @@ spec:
     prometheus:
       prometheusSpec:
         retention: 2h
+        additionalScrapeConfigs:
+          - job_name: kbot
+            metrics_path: /metrics
+            static_configs:
+              - targets:
+                  - kbot-metrics.flux-system.svc.cluster.local:8080
     prometheus-node-exporter:
       hostRootFsMount:
         enabled: false
