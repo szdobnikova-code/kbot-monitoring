@@ -5,3 +5,5 @@ resources:
   - prometheus.yaml
   - grafana-repository.yaml
   - loki.yaml
+  - fluent-repository.yaml
+  - fluent-bit.yaml
